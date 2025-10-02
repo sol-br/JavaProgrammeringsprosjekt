@@ -13,6 +13,7 @@ public class DayMain {
 
         System.out.println("==============");
         System.out.println("OPPGAVE 1");
+        System.out.println("Hello world!");
         System.out.println("==============");
         System.out.println();
 
