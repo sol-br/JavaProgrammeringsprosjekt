@@ -22,7 +22,9 @@ public class DailyPower {
 
         double sum = 0;
 
-        // TODO
+        for(int i = 0; i < usage.length; i++) {
+            sum += usage[i];
+        }
 
         return sum;
     }
