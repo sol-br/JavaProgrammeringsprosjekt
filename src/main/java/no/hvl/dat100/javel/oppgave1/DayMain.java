@@ -20,7 +20,9 @@ public class DayMain {
         /*
         Andrea:
         */
-
+        DailyPower.printPowerPrices(powerprices_day);
+        System.out.printf("Den totale strømprisen: %.2f NOK%n", DailyPower.computeSpotPrice(powerusage_day, powerprices_day));
+        System.out.printf("Med Norges pris: %.2f NOK%n", DailyPower.computeNorgesPrice(powerusage_day));
 
 
         /*
