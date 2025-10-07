@@ -12,8 +12,9 @@ public class DailyPower {
 
     // b) print power usage during a day
     public static void printPowerUsage(double[] usage) {
-
-        // TODO
+        for(int i = 0; i < usage.length; i++) {
+            System.out.print(usage[i] + " kWh");
+        }
 
     }
 
@@ -22,7 +23,9 @@ public class DailyPower {
 
         double sum = 0;
 
-        // TODO
+        for(int i = 0; i < usage.length; i++) {
+            sum += usage[i];
+        }
 
         return sum;
     }
@@ -53,8 +56,14 @@ public class DailyPower {
     public static double computePowerSupport(double[] usage, double[] prices) {
 
         double support = 0;
+        double hourPrice;
 
-        // TODO
+        for (int i = 0; i < usage.length; i++) {
+            hourPrice = usage[i]*prices[i];
+            if (hourPrice > THRESHOLD) {
+                support = support + (hourPrice*PERCENTAGE);
+            }
+        }
 
         return support;
     }
@@ -70,7 +79,7 @@ public class DailyPower {
         return price;
     }
 
-    // g) compute peak usage during a single day
+    // h) compute peak usage during a single day
     public static double findPeakUsage(double[] usage) {
 
         double temp_max = 0;
@@ -80,6 +89,7 @@ public class DailyPower {
         return temp_max;
     }
 
+    // i) find avergae power during a single day
     public static double findAvgPower(double[] usage) {
 
         double average = 0;
