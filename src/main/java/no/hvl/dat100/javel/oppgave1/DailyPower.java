@@ -57,8 +57,14 @@ public class DailyPower {
     public static double computePowerSupport(double[] usage, double[] prices) {
 
         double support = 0;
+        double hourPrice;
 
-        // TODO
+        for (int i = 0; i < usage.length; i++) {
+            hourPrice = usage[i]*prices[i];
+            if (hourPrice > THRESHOLD) {
+                support = support + (hourPrice*PERCENTAGE);
+            }
+        }
 
         return support;
     }
