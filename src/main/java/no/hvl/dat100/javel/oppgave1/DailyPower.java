@@ -5,9 +5,9 @@ public class DailyPower {
     // a) print power prices during a day
     public static void printPowerPrices(double[] prices) {
         for(double price:prices){
-            System.out.print(price + " kWh ");
+            System.out.print(price + " NOK ");
         }
-
+    System.out.println();
     }
 
     // b) print power usage during a day
@@ -32,11 +32,10 @@ public class DailyPower {
 
     // d) compute spot price for a single day
     public static double computeSpotPrice(double[] usage, double[] prices) {
-
         double price = 0;
-
-        // TODO
-
+        for(int i = 0; i<usage.length;i++) {
+            price+=usage[i]*prices[i];
+        }
         return price;
     }
 
@@ -60,8 +59,14 @@ public class DailyPower {
     public static double computePowerSupport(double[] usage, double[] prices) {
 
         double support = 0;
+        double hourPrice;
 
-        // TODO
+        for (int i = 0; i < usage.length; i++) {
+            hourPrice = usage[i]*prices[i];
+            if (hourPrice > THRESHOLD) {
+                support = support + (hourPrice*PERCENTAGE);
+            }
+        }
 
         return support;
     }
@@ -70,15 +75,14 @@ public class DailyPower {
 
     // g) compute norges pris for a single day
     public static double computeNorgesPrice(double[] usage) {
-
         double price = 0;
-
-        // TODO
-
+        for(int i = 0; i<usage.length;i++) {
+            price+=usage[i]*0.5;
+        }
         return price;
     }
 
-    // g) compute peak usage during a single day
+    // h) compute peak usage during a single day
     public static double findPeakUsage(double[] usage) {
 
         double temp_max = 0;
@@ -88,11 +92,17 @@ public class DailyPower {
         return temp_max;
     }
 
+    // i) find avergae power during a single day
     public static double findAvgPower(double[] usage) {
 
         double average = 0;
+        int i;
 
-        // TODO
+        for (i = 0; i < usage.length; i++) {
+            average += usage[i];
+        }
+
+        average = average/i;
 
         return average;
     }
