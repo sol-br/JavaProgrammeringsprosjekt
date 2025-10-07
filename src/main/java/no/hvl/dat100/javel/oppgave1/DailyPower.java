@@ -95,8 +95,13 @@ public class DailyPower {
     public static double findAvgPower(double[] usage) {
 
         double average = 0;
+        int i;
 
-        // TODO
+        for (i = 0; i < usage.length; i++) {
+            average += usage[i];
+        }
+
+        average = average/i;
 
         return average;
     }
