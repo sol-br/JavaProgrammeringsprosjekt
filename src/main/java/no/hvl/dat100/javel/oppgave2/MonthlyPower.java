@@ -6,8 +6,15 @@ public class MonthlyPower {
 
     // a) print power usage for a month
     public static void print_PowerUsage(double[][] usage) {
-
-        // TODO
+        int dagen = 1;
+        for(double[] dag:usage){
+            System.out.print("Dag " + dagen + ":");
+            for(double strom:dag){
+                System.out.printf("%5.2f kwh", strom);
+            }
+            System.out.println();
+            dagen+=1;
+        }
 
     }
 
@@ -30,12 +37,21 @@ public class MonthlyPower {
 
     // d) determine whether a given threshold in powerusage for the month has been exceeded
     public static boolean exceedThreshold(double[][] powerusage, double threshold) {
-
         boolean exceeded = false;
         double usage = 0;
-
-        // TODO
-
+        int dag = 0;
+        int time = 0;
+        while (usage < threshold && dag < powerusage.length) {
+            usage += powerusage[dag][time];
+            time += 1;
+            if(time==24){
+                dag+=1;
+                time=0;
+            }
+        }
+        if(usage >= threshold){
+            exceeded=true;
+        }
         return exceeded;
     }
 
@@ -61,11 +77,12 @@ public class MonthlyPower {
 
     // g) Norgesprice for the month
     public static double computeNorgesPrice(double[][] usage) {
-
         double price = 0;
-
-        // TODO
-
+        for(double[] dag:usage) {
+            for (double strom : dag) {
+                price += strom * 0.5;
+            }
+        }
         return price;
     }
 }

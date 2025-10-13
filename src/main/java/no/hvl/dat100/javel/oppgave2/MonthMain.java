@@ -20,7 +20,10 @@ public class MonthMain {
         /*
         Andrea
         */
-
+        MonthlyPower.print_PowerUsage(power_usage_month);
+        System.out.println("Hytte over grense :" + MonthlyPower.exceedThreshold(power_usage_month,1000));
+        System.out.println("Hus over grense :" + MonthlyPower.exceedThreshold(power_usage_month,5000));
+        System.out.printf("Norgespris for måneden: %.2f NOK%n", MonthlyPower.computeNorgesPrice(power_usage_month));
         /*
         Solfrid
         */
