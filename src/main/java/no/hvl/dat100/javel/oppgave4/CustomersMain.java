@@ -19,5 +19,11 @@ public class CustomersMain {
 
         */
 
+        //Andrea
+
+        //Solfrid
+
+        //Grethe
+
     }
 }
