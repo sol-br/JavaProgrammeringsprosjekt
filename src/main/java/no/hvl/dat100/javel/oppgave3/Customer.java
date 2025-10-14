@@ -1,5 +1,9 @@
 package no.hvl.dat100.javel.oppgave3;
 
+//a, d: Grethe
+//b: Andrea
+//c: Solfrid
+
 public class Customer {
 
     // TODO - object variables (attributes)

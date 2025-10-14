@@ -6,14 +6,14 @@ public class Customers {
 
     private Customer[] customers;
 
-    // a) Complete constructor
+    // a) Complete constructor //Solfrid
     public Customers(int size) {
 
         // TODO
 
     }
 
-    // b) count number of non-null references
+    // b) count number of non-null references //Grethe
     public int countNonNull() {
 
 
@@ -24,7 +24,7 @@ public class Customers {
         return count;
     }
 
-    // c) return reference to customer with given id (if exists)
+    // c) return reference to customer with given id (if exists) //Solfrid
     public Customer getCustomer(int customer_id) {
 
         boolean funnet = false;
@@ -35,7 +35,7 @@ public class Customers {
         return c;
     }
 
-    // d) add a customer to the reference table
+    // d) add a customer to the reference table //Andrea
     public boolean addCustomer(Customer c) {
 
         boolean inserted = false;
@@ -45,7 +45,7 @@ public class Customers {
         return inserted;
     }
 
-    // e) remove customer with given id from reference table
+    // e) remove customer with given id from reference table //Grethe
     public Customer removeCustomer(int customer_id) {
 
         boolean deleted = false;
@@ -56,7 +56,7 @@ public class Customers {
         return c;
     }
 
-    // f) return reference table with all customers
+    // f) return reference table with all customers //Andrea
     public Customer[] getCustomers() {
 
         Customer[] customers = null;
