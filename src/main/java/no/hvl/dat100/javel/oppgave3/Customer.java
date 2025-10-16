@@ -6,10 +6,10 @@ package no.hvl.dat100.javel.oppgave3;
 
 public class Customer {
 
-    String name;
-    String email;
-    int customer_id;
-    PowerAgreementType agreement;
+    private String name;
+    private String email;
+    private int customer_id;
+    private PowerAgreementType agreement;
 
     public Customer(String name, String email, int customer_id, PowerAgreementType agreement) {
 
@@ -18,6 +18,11 @@ public class Customer {
 
     // TODO - getter/setter methods for all objectvariables
 
-    // TODO - toString method
+    public void customerToString() {
+        System.out.println("Customer number: " + customer_id);
+        System.out.println("Name: " + name);
+        System.out.println("E-Mail: " + email);
+        System.out.println("Agreement: " + agreement);
+    }
 
 }
