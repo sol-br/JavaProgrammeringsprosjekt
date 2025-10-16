@@ -69,12 +69,24 @@ public class MonthlyPower {
         return price;
     }
 
-    // f) power support for the month
+    // f) power support for the month, grethe har tenkt å komme tilbake til dette senere
+    private static final double THRESHOLD = 0.9375;
+    private static final double PERCENTAGE = 0.9;
+
     public static double computePowerSupport(double[][] usage, double[][] prices) {
 
         double support = 0;
 
-        // TODO
+        double hourPrice;
+
+        for (int i = 0; i < usage.length; i++) {
+            for (int j = 0; j < usage[i].length; j++) {
+                hourPrice = usage[i][j]*prices[i][j];
+                if (hourPrice > THRESHOLD) {
+                    support = support + (hourPrice*PERCENTAGE);
+                }
+            }
+        }
 
         return support;
     }
