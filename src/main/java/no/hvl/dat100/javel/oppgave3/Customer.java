@@ -6,7 +6,10 @@ package no.hvl.dat100.javel.oppgave3;
 
 public class Customer {
 
-    // TODO - object variables (attributes)
+    String name;
+    String email;
+    int customer_id;
+    PowerAgreementType agreement;
 
     public Customer(String name, String email, int customer_id, PowerAgreementType agreement) {
 
