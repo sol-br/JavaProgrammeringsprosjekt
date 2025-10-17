@@ -29,7 +29,8 @@ public class MonthMain {
         /*
         Solfrid
         */
-
+        MonthlyPower.print_PowerPrices(power_prices_month);
+        System.out.printf("Spotpris for måneden: %.2f NOK%n",MonthlyPower.computeSpotPrice(MonthPowerData.powerusage_month, MonthPowerData.powerprices_month));
         /*
         Grethe
         */

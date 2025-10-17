@@ -20,8 +20,15 @@ public class MonthlyPower {
 
     // b) print power prices for a month
     public static void print_PowerPrices(double[][] prices) {
-
-        // TODO
+        int antDager = 1;
+        for(double[] dag:prices){
+            System.out.print("Dag " + antDager + ":");
+            for(double price:dag){
+                System.out.printf("%5.2f NOK", price);
+            }
+            System.out.println();
+            antDager+=1;
+        }
 
     }
 
@@ -63,8 +70,12 @@ public class MonthlyPower {
     public static double computeSpotPrice(double[][] usage, double[][] prices) {
 
         double price = 0;
+        for (int day = 0; day < usage.length; day++) {
 
-        // TODO
+            for (int hour = 0; hour < usage[day].length; hour++) {
+                price += usage[day][hour] * prices[day][hour];
+            }
+        }
 
         return price;
     }
