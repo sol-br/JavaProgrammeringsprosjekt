@@ -29,8 +29,8 @@ public class DayMain {
         Solfrid:
         */
         DailyPower.printPowerUsage(powerusage_day);
-        System.out.printf("Det totale strømforbruket: %.2f kwh%n", DailyPower.computePowerUsage(powerusage_day));
-        System.out.printf("Største strømforbruk i dag: %.2f kwh%n", DailyPower.computePowerUsage(powerusage_day));
+        System.out.printf("Strømpris med strømstøtte for en gitt time: %.2f NOK%n", DailyPower.computeSpotPrice(powerusage_day, powerprices_day));
+        System.out.printf("Største strømforbruk i dag: %.2f kwh%n", DailyPower.findPeakUsage(powerusage_day));
 
 
         /*
