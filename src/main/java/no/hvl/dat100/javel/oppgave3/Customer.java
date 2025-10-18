@@ -17,6 +17,38 @@ public class Customer {
     }
 
     // TODO - getter/setter methods for all objectvariables
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getCustomer_id() {
+        return customer_id;
+    }
+
+    public void setCustomer_id(int customer_id) {
+        this.customer_id = customer_id;
+    }
+
+    public PowerAgreementType getAgreement() {
+        return agreement;
+    }
+
+    public void setAgreement(PowerAgreementType agreement) {
+        this.agreement = agreement;
+    }
+}
 
     public void customerToString() {
         System.out.println("Customer number: " + customer_id);
