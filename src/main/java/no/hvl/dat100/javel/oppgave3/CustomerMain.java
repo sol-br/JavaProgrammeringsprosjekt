@@ -18,7 +18,9 @@ public class CustomerMain {
 
         */
 
-        //Andrea
+        Customer customer1 = new Customer();
+        Customer customer2 = new Customer();
+        Customer customer3 = new Customer();
 
         //Solfrid
 
