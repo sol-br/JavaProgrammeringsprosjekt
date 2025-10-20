@@ -15,6 +15,7 @@ public class Customer {
         this.name = name;
         this.email = email;
         this.customer_id = customer_id;
+        this.agreement = agreement;
     }
 
     // TODO - getter/setter methods for all objectvariables
@@ -49,7 +50,7 @@ public class Customer {
     public void setAgreement(PowerAgreementType agreement) {
         this.agreement = agreement;
     }
-}
+
 
     public void customerToString() {
         System.out.println("Customer number: " + customer_id);
