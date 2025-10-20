@@ -18,9 +18,9 @@ public class CustomerMain {
 
         */
 
-        Customer customer1 = new Customer();
-        Customer customer2 = new Customer();
-        Customer customer3 = new Customer();
+        Customer customer1 = new Customer("Andrea", "andrea@gmail.no", 1, PowerAgreementType.SPOTPRICE);
+        Customer customer2 = new Customer("Grethe", "grethe@gmail.no", 2,PowerAgreementType.POWERSUPPORT);
+        Customer customer3 = new Customer("Solfrid", "solfrid@gmail.com", 3, PowerAgreementType.NORGESPRICE);
 
         //Solfrid
 
