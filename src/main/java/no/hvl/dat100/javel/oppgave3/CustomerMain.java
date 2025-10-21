@@ -25,5 +25,12 @@ public class CustomerMain {
         //Solfrid
 
         //Grethe
+
+        customer1.customerToString();
+        System.out.println();
+        customer2.customerToString();
+        System.out.println();
+        customer3.customerToString();
+
     }
 }
